@@ -243,11 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         return Math.abs(element - lastMatrix.elements[index]);
                     })
                     const differentAmount = diff.reduce((a, b) => a + b, 0);
-                    console.log(differentAmount)
-                    if(differentAmount > 10000) {
-                        console.log('reset', currentMatrix.elements)
-                    }
-                    if(differentAmount > 500) {
+                    if(differentAmount > 5000) {
                         displayTarget.object3D.matrix =  scanObj.object3D.matrix;  
                     }
                 }
