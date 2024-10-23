@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amocat</title>
+    <link rel="stylesheet" href="./styles/default.css">
+    <style>
+        .pageContainer {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            position: relative;
+            overflow: hidden;
+        }
+        .header {
+            width: 100%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+        .logo {
+            width: 200px;
+            height: 200px;
+        }
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .content {
+            flex:1 0 auto;
+            width: 100%;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 2rem;
+            text-align: center;
+        }
+        .desc {
+            flex: 0 0 auto;
+            margin: 0 auto;
+            padding-block: 12px;
+        }
+        .scanList {
+            flex: 1 0 auto;
+            margin: 0 auto;
+            padding: 1rem;
+            height: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        .scanItem {
+            height: auto;
+            cursor: pointer;
+            transform: scale(1);
+            transition: all 0.2s ease-in-out;
+        }
+        .icon{
+            --size: 200px;
+            width: var(--size);
+            height: var(--size);
+            overflow: hidden;
+            border-radius: 12px;
+        }
+        @media (max-width: 768px) {
+            .icon{
+                --size: 100px;
+            }
+        }
+        .scanItem img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            
+        }
+        .scanItem:hover {
+            transform: scale(1.05);
+        }
+        .footer {
+            width: 100%;
+            /* height: 50px;
+            background-color: purple; */
+        }
+    </style>
+</head>
+<body>
+    <div class="pageContainer">
+        <div class="header">
+            <div class="logo">
+                <img src="./resources/images/Sit loop 4.png" />
+            </div>
+        </div>
+        <div class="content">
+            <div class="desc">
+                <h1>Amocat</h1>
+                <p>Use your camera to scan object and find the cat</p>
+            </div>
+            <div class="scanList">
+                <a class="scanItem" href="/pages/yahang.html">
+                    <div class="icon">
+
+                        <img src="./resources/images/yahang.jpg" />
+                    </div>
+                </a>
+                <a class="scanItem" href="/pages/bottle.html">
+                    <div class="icon">
+
+                        <img src="./resources/images/bottle.jpg" />
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="footer">
+
+        </div>
+    </div>
+</body>
+</html>
